@@ -71,3 +71,30 @@ function showToast(message) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.add('hidden'), 4300);
 }
+const backgroundMusic = document.getElementById("backgroundMusic");
+const musicButton = document.getElementById("musicButton");
+const startButton = document.getElementById("startBtn");
+
+musicButton.addEventListener("click", async () => {
+if (backgroundMusic.paused) {
+try {
+await backgroundMusic.play();
+musicButton.textContent = "♫ Música: ON";
+} catch (error) {
+console.error("No se pudo reproducir la música:", error);
+}
+} else {
+backgroundMusic.pause();
+musicButton.textContent = "♫ Música: OFF";
+}
+});
+
+// La música comienza cuando la persona abre tu pequeño mundo.
+startButton.addEventListener("click", async () => {
+try {
+await backgroundMusic.play();
+musicButton.textContent = "♫ Música: ON";
+} catch (error) {
+console.log("Puedes activar la música con el botón ♫");
+}
+});
