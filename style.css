@@ -167,3 +167,24 @@ footer { text-align: center; padding: 24px; font-size: .65rem; letter-spacing: .
   .intro-hero h1 { font-size: clamp(2.3rem, 10vw, 4rem); }
   .intro-hero .intro-copy { max-width: 340px; font-size: .95rem; }
 }
+.music-button {
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 9999;
+padding: 12px 18px;
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 25px;
+background: rgba(20, 45, 65, 0.9);
+color: white;
+font-size: 14px;
+cursor: pointer;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+transition: transform 0.2s, background 0.2s;
+}
+
+.music-button:hover {
+transform: scale(1.05);
+background: rgba(40, 75, 95, 0.95);
+}
+
